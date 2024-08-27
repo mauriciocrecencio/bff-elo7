@@ -1,6 +1,14 @@
+import { Routes, Route } from "react-router-dom"
+import { WorkWithUs } from "./pages/WorkWithUs"
+
 function App() {
   return (
-    <h1 className="bg-red-500">Hello World</h1>
+    <>
+    <Routes>
+       <Route path="/work-with-us" element={<WorkWithUs />} />
+    </Routes>
+ </>
+
   )
 }
 
