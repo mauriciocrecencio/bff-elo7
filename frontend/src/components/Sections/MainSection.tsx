@@ -1,4 +1,3 @@
-import ArrowRight from "@/assets/svg/ArrowRight";
 import { Link } from "../ui/Link";
 import { Separator } from "../ui/Separator";
 import { Banner } from "../Banner";
@@ -16,8 +15,8 @@ export default function MainSection() {
           libero eu eros sagittis.
         </p>
         <Separator />
-        <Link className="m-4">
-          vagas em aberto <ArrowRight />
+        <Link href="/oportunidades" className="m-4">
+          vagas em aberto
         </Link>
       </Section>
     </header>
