@@ -7,9 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
+        'gray-bg': '#F4F5F7',
         'gray-50': '#C8C8CC',
+        'gray-100': '#57575C',
         'gray-500': '#333333',
-        'aqua': '#008B90'
+        'aqua': '#008B90',
+        'yellow': '#D99F2C',
       }
     },
   },
