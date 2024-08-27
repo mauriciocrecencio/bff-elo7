@@ -1,7 +1,7 @@
-import  Banner  from "@/components/Banner";
+import  MainSection  from "@/components/Sections/MainSection";
 
 export function WorkWithUs() {
   return (
-    <Banner/>
+    <MainSection/>
   );
 }
