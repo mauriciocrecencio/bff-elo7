@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import { cn } from "@/lib/utils";
 
 type Props = {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ type Props = {
 
 export default function Section({children, className}: Props) {
   return (
-    <section className={clsx("px-4 flex-col flex items-center", className)}>
+    <section className={cn("px-4 flex-col flex items-center", className)}>
       {children}
     </section>
   );
