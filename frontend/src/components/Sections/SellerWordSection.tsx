@@ -2,7 +2,7 @@ import Section from "../ui/Section";
 
 export function SellerWordSection() {
   return (
-    <Section className="items-start bg-gray-bg pt-10">
+    <Section className="items-start bg-gray-bg py-10">
       <img className="rounded-2xl" src="/images/worker-woman.jpeg" />
       <h2 className="mt-10 text-[26px] font-semibold leading-8 text-gray-500">
         Palavra da vendedora
