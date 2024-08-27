@@ -1,13 +1,13 @@
 export const results = [
   {
-    image: "/public/images/mountain-frame.png",
+    image: "/images/mountain-frame.png",
     alt: "Quadro de uma montanha, indicando desafios",
     title: "Resultados",
     description:
       "Donec in vestibulum elit. Aliquam finibus facilisis elit, sit amet malesuada nibh tempor sed. Aliquam consequat ultrices fringilla. Sed id quam sollicitudin mi ultricies feugiat a vel velit. Pellentesque finibus vel tortor sed hendrerit. Vestibulum eu sem sapien.",
   },
   {
-    image: "/public/images/thumbs-up.png",
+    image: "/images/thumbs-up.png",
     alt: "Mão com polegar para cima, indicando sucesso",
     title: "Qualidade de vida",
     description:
@@ -18,7 +18,7 @@ export const results = [
     },
   },
   {
-    image: "/public/images/vault.png",
+    image: "/images/vault.png",
     alt: "Cofre vermelho indicando segurança",
     title: "Nossos valores",
     description:
