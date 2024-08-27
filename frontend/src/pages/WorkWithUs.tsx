@@ -1,5 +1,7 @@
+import  Banner  from "@/components/Banner";
+
 export function WorkWithUs() {
   return (
-    <h1>Work With Us</h1>
-  )
+    <Banner/>
+  );
 }
