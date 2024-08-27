@@ -12,7 +12,9 @@ export default {
         'gray-100': '#57575C',
         'gray-500': '#333333',
         'aqua': '#008B90',
+        'light-yellow': '#FFF3DB',
         'yellow': '#D99F2C',
+        'highlight-yellow': '#FDB933',
       }
     },
   },
