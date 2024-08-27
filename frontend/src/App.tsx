@@ -5,7 +5,7 @@ function App() {
   return (
     <>
     <Routes>
-       <Route path="/work-with-us" element={<WorkWithUs />} />
+       <Route path="/trabalhe-conosco" element={<WorkWithUs />} />
     </Routes>
  </>
 
