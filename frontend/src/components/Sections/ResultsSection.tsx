@@ -5,10 +5,10 @@ import { Link } from "../ui/Link";
 
 export function ResultsSection() {
   return (
-    <Section className="pb-10 bg-light-yellow">
-      <ul>
-        {results.map((result, index) => (
-          <li key={result.image} className="flex flex-col items-center gap-6 mt-10">
+    <Section className="bg-light-yellow">
+      <ul className="flex gap-10 flex-col md:flex-row md:gap-4 md:*:flex-1">
+        {results.map((result) => (
+          <li key={result.image} className="flex flex-col items-center gap-6">
             <div className="bg-highlight-yellow rounded-full p-8">
               <Image src={result.image} alt={result.alt} className="size-[136px]" />
             </div>
