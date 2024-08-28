@@ -1,5 +1,5 @@
+import { ActionButton } from '../ui/ActionButton';
 import { Banner } from '../ui/Banner';
-import { Link } from '../ui/Link';
 import Section from '../ui/Section';
 import { Separator } from '../ui/Separator';
 
@@ -19,7 +19,7 @@ export default function MainSection() {
           sagittis.
         </p>
         <Separator />
-        <Link href="/oportunidades">vagas em aberto</Link>
+        <ActionButton href="/oportunidades">vagas em aberto</ActionButton>
       </Section>
     </header>
   );

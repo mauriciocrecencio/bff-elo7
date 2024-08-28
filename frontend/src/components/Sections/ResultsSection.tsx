@@ -1,7 +1,7 @@
 import { results } from '@/constants/resultsSection';
 
+import { ActionButton } from '../ui/ActionButton';
 import { Image } from '../ui/Image';
-import { Link } from '../ui/Link';
 import Section from '../ui/Section';
 
 export function ResultsSection() {
@@ -15,7 +15,7 @@ export function ResultsSection() {
             </div>
             <h3 className="text-center text-2xl text-gray-500">{result.title}</h3>
             <p className="px-2 text-center text-xl text-gray-100">{result.description}</p>
-            {result.action && <Link href={result.action.link}>{result.action.label}</Link>}
+            {result.action && <ActionButton href={result.action.link}>{result.action.label}</ActionButton>}
           </li>
         ))}
       </ul>
