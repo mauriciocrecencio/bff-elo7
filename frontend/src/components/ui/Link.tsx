@@ -6,14 +6,20 @@ type Props = {
   className?: string;
   href: string;
   arrowPosition?: 'left' | 'right';
-}
+};
 
-export function Link({children, className, href, arrowPosition = 'right'} : Props) {
+export function Link({ children, className, href, arrowPosition = 'right' }: Props) {
   return (
-    <a href={href} className={cn('flex text-aqua border border-transparent hover:border-aqua hover:cursor-pointer p-2 w-fit transition-all rounded-md text-xl leading-6 md:p-3', className)}>
-      {arrowPosition === 'left' && <ArrowRight className="transform rotate-180 mr-2" />}
+    <a
+      href={href}
+      className={cn(
+        'flex w-fit rounded-md border border-transparent p-2 text-xl leading-6 text-aqua transition-all hover:cursor-pointer hover:border-aqua md:p-3',
+        className
+      )}
+    >
+      {arrowPosition === 'left' && <ArrowRight className="mr-2 rotate-180 transform" />}
       {children}
-      {arrowPosition === 'right' && <ArrowRight className='ml-2'/>}
+      {arrowPosition === 'right' && <ArrowRight className="ml-2" />}
     </a>
-  )
+  );
 }

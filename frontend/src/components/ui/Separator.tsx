@@ -1,5 +1,3 @@
 export function Separator() {
-  return (
-    <div className="h-px bg-gray-50 w-full"/>
-  )
+  return <div className="h-px w-full bg-gray-50" />;
 }

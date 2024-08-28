@@ -1,12 +1,6 @@
-import { SVGProps } from "react"
+import { SVGProps } from 'react';
 const ArrowRight = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={25}
-    height={24}
-    fill="none"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width={25} height={24} fill="none" {...props}>
     <mask
       id="a"
       width={25}
@@ -15,7 +9,7 @@ const ArrowRight = (props: SVGProps<SVGSVGElement>) => (
       y={0}
       maskUnits="userSpaceOnUse"
       style={{
-        maskType: "alpha",
+        maskType: 'alpha'
       }}
     >
       <path fill="#D9D9D9" d="M.5 0h24v24H.5z" />
@@ -27,5 +21,5 @@ const ArrowRight = (props: SVGProps<SVGSVGElement>) => (
       />
     </g>
   </svg>
-)
-export default ArrowRight
+);
+export default ArrowRight;
