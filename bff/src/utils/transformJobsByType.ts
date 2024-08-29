@@ -1,11 +1,12 @@
 import { Job, JobByType } from '../ts/types/Job';
+import { capitalizeWords } from '.';
 import { formatJob } from './formatJob';
 
 export function transformJobsByType(jobs: Job[]): Record<string, JobByType[]> {
   const jobTypeRecord = jobs
     .filter((job) => job.is_active)
     .reduce((acc: Record<string, JobByType[]>, job) => {
-      const { type } = job;
+      const type = capitalizeWords(job.type);
 
       if (!acc[type]) {
         acc[type] = [];
