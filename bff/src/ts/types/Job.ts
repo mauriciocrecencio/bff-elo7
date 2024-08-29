@@ -5,3 +5,9 @@ export type Job = {
   location: string | null;
   is_active: boolean;
 };
+
+export type JobByType = {
+  title: string;
+  location: string;
+  path: string;
+};
