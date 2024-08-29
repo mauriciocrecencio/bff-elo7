@@ -8,12 +8,13 @@ type Props = {
   limit?: number;
 };
 
-export function useGetJobs({ search, page, limit }: Props) {
-  const query = `page=${page}&limit=${limit}&name=${search}`;
-  const { data, isLoading, isSuccess } = useQuery({
+export function useGetJobs({ search, page = 1, limit = 10 }: Props) {
+  const query = `page=${page}&limit=${limit}&search=${search}`;
+
+  const { data, isLoading, isSuccess, isError } = useQuery({
     queryKey: ['jobs', search, page, limit],
     queryFn: async () => (await apiClient(`/jobs?${query}`)).data,
     staleTime: Infinity
   });
-  return { data, isLoading, isSuccess };
+  return { data, isLoading, isSuccess, isError };
 }

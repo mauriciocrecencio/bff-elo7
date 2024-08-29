@@ -17,7 +17,11 @@ export function JobsSection() {
 
   const debouncedValue = useDebounce(search, 1000);
 
-  const { data: jobs, isLoading } = useGetJobs({
+  const {
+    data: jobs,
+    isLoading,
+    isError
+  } = useGetJobs({
     search: debouncedValue
     // page,
     // limit
@@ -43,12 +47,22 @@ export function JobsSection() {
         <div className="w-full">
           {isLoading ? (
             <SkeletonJobs />
-          ) : jobs ? (
+          ) : isError ? (
+            <p className="mt-10 text-center text-2xl">Ops, algo deu errado 😥</p>
+          ) : Object.keys(jobs).length > 0 ? (
             <JobsList jobsList={jobs} />
           ) : (
             <>
-              <p className="mt-10 text-center text-2xl">Poxa, que pena 😥</p>
-              <p className="mt-2 text-center text-2xl">não estamos com nenhuma vaga aberta no momento</p>
+              {debouncedValue ? (
+                <p className="mt-10 text-center text-2xl">
+                  Não encontramos nenhuma vaga com o termo "{debouncedValue}"
+                </p>
+              ) : (
+                <>
+                  <p className="mt-10 text-center text-2xl">Poxa, que pena 😥</p>
+                  <p className="mt-10 text-center text-2xl">Não temos vagas disponíveis no momento</p>
+                </>
+              )}
             </>
           )}
         </div>
