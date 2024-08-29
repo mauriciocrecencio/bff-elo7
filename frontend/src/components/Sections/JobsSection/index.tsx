@@ -44,7 +44,7 @@ export function JobsSection() {
             placeholder="nome da vaga"
           />
         </div>
-        <div className="w-full">
+        <div className="w-full transition-all">
           {isLoading ? (
             <SkeletonJobs />
           ) : isError ? (
@@ -58,10 +58,10 @@ export function JobsSection() {
                   Não encontramos nenhuma vaga com o termo "{debouncedValue}"
                 </p>
               ) : (
-                <>
-                  <p className="mt-10 text-center text-2xl">Poxa, que pena 😥</p>
-                  <p className="mt-10 text-center text-2xl">Não temos vagas disponíveis no momento</p>
-                </>
+                <div className="mt-8 grid gap-2 text-center text-2xl">
+                  <p>Poxa, que pena 😥</p>
+                  <p>Não temos vagas disponíveis no momento</p>
+                </div>
               )}
             </>
           )}
