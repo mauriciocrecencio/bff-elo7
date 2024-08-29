@@ -1,6 +1,14 @@
 import { Job, JobByType } from '../ts/types/Job';
 import { slugify } from './slugify';
 
+function capitalizeWords(str: string | null) {
+  if (!str) return null;
+  return str
+    .split(' ')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+}
+
 function formatLocation(location: string | null): string {
   return location
     ? location
@@ -18,8 +26,8 @@ export function formatJob(job: Job): JobByType {
   const { title, level, location } = job;
 
   return {
-    title: formatTitle(title, level),
-    location: formatLocation(location),
+    title: capitalizeWords(formatTitle(title, level))!,
+    location: capitalizeWords(formatLocation(location))!,
     path: slugify(title)
   };
 }
