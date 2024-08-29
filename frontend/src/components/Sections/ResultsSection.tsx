@@ -1,6 +1,6 @@
 import { results } from '@/constants/resultsSection';
 
-import { ActionButton } from '../ui/ActionButton';
+import { ActionButton } from '../ActionButton';
 import { Image } from '../ui/Image';
 import Section from '../ui/Section';
 

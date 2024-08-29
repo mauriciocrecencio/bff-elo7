@@ -1,5 +1,5 @@
-import { ActionButton } from '../ui/ActionButton';
-import { Banner } from '../ui/Banner';
+import { ActionButton } from '../ActionButton';
+import { Banner } from '../Banner';
 import Section from '../ui/Section';
 import { Separator } from '../ui/Separator';
 

@@ -1,7 +1,7 @@
 import ArrowRight from '@/assets/svg/ArrowRight';
 import { cn } from '@/lib/utils';
 
-import { Link } from './Link';
+import { Link } from './ui/Link';
 
 type Props = {
   children: React.ReactNode;

@@ -1,4 +1,4 @@
-import { Image } from './Image';
+import { Image } from './ui/Image';
 
 type Props = {
   text?: string;
