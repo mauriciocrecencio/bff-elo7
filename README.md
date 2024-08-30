@@ -16,13 +16,11 @@ Crie um arquivo `.env` na raiz de `/bff` e `/frontend` com o mesmo conteúdo de 
 
 ## Instalação
 
-Para instalar este projeto, siga as etapas abaixo dentro do diretório raiz:
+**`Siga as etapas abaixo dentro do diretório raiz /elo7-case-tecnico `**
 
 1. Clone o repositório para o seu diretório local.
 2. Execute o comando `npm install` na raiz do projeto para instalar as dependências do BFF e Frontend.
-3. Após instalar, execute o comando `npm start`.
-
-
+3. Após instalar, execute o comando `npm start` na raiz do projeto também.
 
 
 ## Licença
