@@ -9,6 +9,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <Routes>
+        <Route path="/" element={<WorkWithUs />} />
         <Route path="/trabalhe-conosco" element={<WorkWithUs />} />
       </Routes>
     </QueryClientProvider>
