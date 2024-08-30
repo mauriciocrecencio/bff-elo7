@@ -22,9 +22,8 @@ const Pagination = React.forwardRef<HTMLButtonElement, PaginationProps>(
         <ol className="flex items-center gap-x-1">
           {Array.from({ length: pageAmount }, (_, i) => i + 1).map((page) => {
             return (
-              <li>
+              <li key={page}>
                 <button
-                  key={page}
                   className={cn(
                     'flex min-h-[38px] min-w-[38px] items-center justify-center px-3 py-2 text-xl text-gray-500 hover:bg-slate-100 focus:bg-slate-100 focus:outline-none disabled:pointer-events-none disabled:opacity-50',
                     {
