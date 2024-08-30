@@ -88,99 +88,115 @@ export const jobApiMock = {
 };
 
 export const transformedJobApiMock = {
-  Engenharia: [
-    {
-      title: 'Pessoa Analista De Data Analytics - Pleno',
-      location: 'São Paulo, Brasil',
-      path: 'pessoa-analista-de-data-analytics'
-    },
-    {
-      title: 'Pessoa Coordenadora De Engenharia De Dados - Senior',
-      location: 'Remoto',
-      path: 'pessoa-coordenadora-de-engenharia-de-dados'
-    },
-    {
-      title: 'Pessoa Engenheira De Dados - Junior',
-      location: 'Remoto',
-      path: 'pessoa-engenheira-de-dados'
-    },
-    {
-      title: 'Pessoa Engenheira De Sre/devops - Senior',
-      location: 'Remoto',
-      path: 'pessoa-engenheira-de-sre-devops'
-    },
-    {
-      title: 'Pessoa Engenheira Devops - Pleno',
-      location: 'Remoto',
-      path: 'pessoa-engenheira-devops'
-    },
-    {
-      title: 'Pessoa Desenvolvedora Front-end - Senior',
-      location: 'Remoto',
-      path: 'pessoa-desenvolvedora-front-end'
-    }
-  ],
-  Financeiro: [
-    {
-      title: 'Especialista De Fp&a - Especialista',
-      location: 'São Paulo, Brasil',
-      path: 'especialista-de-fp-a'
-    }
-  ],
-  'Controles Internos': [
-    {
-      title: 'Estágio Em Riscos E Controles Internos - Estágio',
-      location: 'São Paulo, Brasil',
-      path: 'est-gio-em-riscos-e-controles-internos'
-    }
-  ],
-  Produto: [
-    {
-      title: 'Gerente De Produto - Pleno',
-      location: 'São Paulo, Brasil',
-      path: 'gerente-de-produto'
-    }
-  ],
-  Operacional: [
-    {
-      title: 'Pessoa Analista De Gestão De Parceiros - Senior',
-      location: 'São Paulo, Brasil',
-      path: 'pessoa-analista-de-gest-o-de-parceiros'
-    }
-  ]
+  jobs: {
+    Engenharia: [
+      {
+        title: 'Pessoa Analista De Data Analytics - Pleno',
+        location: 'São Paulo, Brasil',
+        path: 'pessoa-analista-de-data-analytics'
+      },
+      {
+        title: 'Pessoa Coordenadora De Engenharia De Dados - Senior',
+        location: 'Remoto',
+        path: 'pessoa-coordenadora-de-engenharia-de-dados'
+      },
+      {
+        title: 'Pessoa Engenheira De Dados - Junior',
+        location: 'Remoto',
+        path: 'pessoa-engenheira-de-dados'
+      },
+      {
+        title: 'Pessoa Engenheira De Sre/devops - Senior',
+        location: 'Remoto',
+        path: 'pessoa-engenheira-de-sre-devops'
+      },
+      {
+        title: 'Pessoa Engenheira Devops - Pleno',
+        location: 'Remoto',
+        path: 'pessoa-engenheira-devops'
+      },
+      {
+        title: 'Pessoa Desenvolvedora Front-end - Senior',
+        location: 'Remoto',
+        path: 'pessoa-desenvolvedora-front-end'
+      }
+    ],
+    Financeiro: [
+      {
+        title: 'Especialista De Fp&a - Especialista',
+        location: 'São Paulo, Brasil',
+        path: 'especialista-de-fp-a'
+      }
+    ],
+    'Controles Internos': [
+      {
+        title: 'Estágio Em Riscos E Controles Internos - Estágio',
+        location: 'São Paulo, Brasil',
+        path: 'est-gio-em-riscos-e-controles-internos'
+      }
+    ],
+    Produto: [
+      {
+        title: 'Gerente De Produto - Pleno',
+        location: 'São Paulo, Brasil',
+        path: 'gerente-de-produto'
+      }
+    ],
+    Operacional: [
+      {
+        title: 'Pessoa Analista De Gestão De Parceiros - Senior',
+        location: 'São Paulo, Brasil',
+        path: 'pessoa-analista-de-gest-o-de-parceiros'
+      }
+    ]
+  },
+
+  paginate: {
+    limit: 10,
+    page: 1,
+    totalPages: 1
+  }
 };
 
 export const filteredByEngenheiroJobApiMock = {
-  Engenharia: [
-    {
-      title: 'Pessoa Engenheira Devops - Pleno',
-      location: 'Remoto',
-      path: 'pessoa-engenheira-devops'
-    },
-    {
-      title: 'Pessoa Engenheira De Dados - Junior',
-      location: 'Remoto',
-      path: 'pessoa-engenheira-de-dados'
-    },
-    {
-      title: 'Pessoa Engenheira De Sre/devops - Senior',
-      location: 'Remoto',
-      path: 'pessoa-engenheira-de-sre-devops'
-    },
-    {
-      title: 'Pessoa Analista De Data Analytics - Pleno',
-      location: 'São Paulo, Brasil',
-      path: 'pessoa-analista-de-data-analytics'
-    },
-    {
-      title: 'Pessoa Coordenadora De Engenharia De Dados - Senior',
-      location: 'Remoto',
-      path: 'pessoa-coordenadora-de-engenharia-de-dados'
-    },
-    {
-      title: 'Pessoa Desenvolvedora Front-end - Senior',
-      location: 'Remoto',
-      path: 'pessoa-desenvolvedora-front-end'
-    }
-  ]
+  jobs: {
+    Engenharia: [
+      {
+        title: 'Pessoa Engenheira Devops - Pleno',
+        location: 'Remoto',
+        path: 'pessoa-engenheira-devops'
+      },
+      {
+        title: 'Pessoa Engenheira De Dados - Junior',
+        location: 'Remoto',
+        path: 'pessoa-engenheira-de-dados'
+      },
+      {
+        title: 'Pessoa Engenheira De Sre/devops - Senior',
+        location: 'Remoto',
+        path: 'pessoa-engenheira-de-sre-devops'
+      },
+      {
+        title: 'Pessoa Analista De Data Analytics - Pleno',
+        location: 'São Paulo, Brasil',
+        path: 'pessoa-analista-de-data-analytics'
+      },
+      {
+        title: 'Pessoa Coordenadora De Engenharia De Dados - Senior',
+        location: 'Remoto',
+        path: 'pessoa-coordenadora-de-engenharia-de-dados'
+      },
+      {
+        title: 'Pessoa Desenvolvedora Front-end - Senior',
+        location: 'Remoto',
+        path: 'pessoa-desenvolvedora-front-end'
+      }
+    ]
+  },
+
+  paginate: {
+    limit: 10,
+    page: 1,
+    totalPages: 1
+  }
 };

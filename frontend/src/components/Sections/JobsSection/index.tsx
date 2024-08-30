@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { Banner } from '@/components/Banner';
+import Pagination from '@/components/Pagination';
 import { SearchInput } from '@/components/SearchInput';
 import Section from '@/components/ui/Section';
 import { Separator } from '@/components/ui/Separator';
@@ -12,19 +13,15 @@ import { JobsList } from './JobsList';
 
 export function JobsSection() {
   const [search, setSearch] = useState('');
-  // const [page, setPage] = useState(1);
-  // const [limit, setLimit] = useState(10);
+  const [page, setPage] = useState(1);
 
   const debouncedValue = useDebounce(search, 1000);
 
-  const {
-    data: jobs,
-    isLoading,
-    isError
-  } = useGetJobs({
-    search: debouncedValue
-    // page,
-    // limit
+  const { data, isLoading, isError } = useGetJobs({
+    search: debouncedValue,
+    page,
+    // Mudar o número abaixo para testar a paginação
+    limit: 5
   });
 
   return (
@@ -49,8 +46,15 @@ export function JobsSection() {
             <SkeletonJobs />
           ) : isError ? (
             <p className="mt-10 text-center text-2xl">Ops, algo deu errado 😥</p>
-          ) : Object.keys(jobs).length > 0 ? (
-            <JobsList jobsList={jobs} />
+          ) : Object.keys(data.jobs).length > 0 ? (
+            <>
+              <JobsList jobsList={data.jobs} />
+              <Pagination
+                pageAmount={data.paginate.totalPages}
+                currentPage={page}
+                onPageChange={(newPage) => setPage(newPage)}
+              />
+            </>
           ) : (
             <>
               {debouncedValue ? (

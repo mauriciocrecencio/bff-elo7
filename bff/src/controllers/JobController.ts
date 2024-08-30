@@ -12,13 +12,14 @@ export async function getJobs(req: Request, res: Response) {
   try {
     const data = await jobService.getJobOpportunities();
     let jobs = filterInactiveJobs(data.jobs);
-    jobs = sortJobsByType(jobs);
-    const { page, limit, skip, totalPages } = paginate(req, jobs.length);
-    jobs = jobs.slice(skip, skip + limit);
 
     if (search) {
       jobs = searchJobs(jobs, search);
     }
+
+    jobs = sortJobsByType(jobs);
+    const { page, limit, skip, totalPages } = paginate(req, jobs.length);
+    jobs = jobs.slice(skip, skip + limit);
 
     const jobsByType = transformJobsByType(jobs);
 
