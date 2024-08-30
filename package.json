@@ -1,0 +1,14 @@
+{
+  "name": "elo7-case-tecnico",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mauriciocrecencio/elo7-case-tecnico.git",
+  "author": "Mauricio Crecencio <65139661+mauriciocrecencio@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm run dev --prefix bff\" \"npm run dev --prefix frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
