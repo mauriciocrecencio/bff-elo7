@@ -6,6 +6,7 @@
   "author": "Mauricio Crecencio <65139661+mauriciocrecencio@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "install": "npm install --prefix bff && npm install --prefix frontend",
     "start": "concurrently \"npm run dev --prefix bff\" \"npm run dev --prefix frontend\""
   },
   "devDependencies": {
