@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import * as JobController from '../controllers/jobController';
+import * as JobController from '../controllers/JobController';
 
 export const jobRoutes = Router();
 
