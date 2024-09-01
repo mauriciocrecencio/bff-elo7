@@ -5,7 +5,7 @@ services:
     build: ./frontend
     container_name: frontend_c
     ports:
-      - '3001:3001'
+      - '80:80'
     depends_on:
       - bff
   bff:

@@ -1,9 +1,14 @@
-FROM node:18-alpine as build
+FROM node:18-alpine3.17 as build
+
 WORKDIR /app
-COPY package.json .
+COPY . /app
+
 RUN npm install
-COPY . .
-EXPOSE 3001
 RUN npm run build
-RUN ["rm", "-rf", "node_modules"]
-CMD ["npm", "start"]
+
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install nginx -y
+COPY --from=build /app/dist /var/www/html/
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]

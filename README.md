@@ -19,7 +19,7 @@ Crie um arquivo `.env` na raiz de `/bff` e `/frontend` com o mesmo conteúdo de 
 ### Docker
 
 1. Com o Docker instalado em seu computador, execute `docker-compose up` na raiz do diretório
-2. Acesse a aplicação https://localhost:3001/trabalhe-conosco
+2. Acesse a aplicação https://localhost:80/trabalhe-conosco
 
 
 ### NPM ou YARN
